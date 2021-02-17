@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,8 +9,13 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Newsreader', serif;
+  font-weight: 400;
+  font-size: 1.06rem;
+}
+
+p {
+  line-height: 1.25rem;
 }
 
 ul {
@@ -22,7 +29,7 @@ a {
 
 main {
   min-height: 100vh;
-  padding-top: 6rem;
+  padding-top: 7rem;
   display: flex;
   flex-direction: column;
 }
@@ -41,10 +48,88 @@ header {
   left: 0;
   width: 100%;
   background-color: #fff;
+  transition: all 200ms ease-in-out;
+}
+header.active {
+  background: #ffc017;
 }
 .header__nav {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header__nav-logo h3 {
+  font-weight: 600;
+}
+.header__nav-items svg {
+  font-size: 1.3rem;
+}
+
+/* === HOME === */
+.home__intro {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  margin-bottom: 4rem;
+}
+.home__intro > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home__intro-left-info {
+  width: 70%;
+}
+.home__intro-left-info h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  width: 70%;
+  margin-bottom: 1rem;
+}
+.home__intro-right {
+  align-items: center;
+}
+.home__intro-right img {
+  width: 40%;
+}
+
+.home__posts-wrapper {
+  padding-top: 2.5rem;
+}
+.home__posts-content {
+  width: 60%;
+}
+
+/* === POST Component === */
+.post {
+  margin-bottom: 2rem;
+}
+.post,
+.article small {
+  font-size: 0.875rem;
+}
+.post h2 {
+  margin: 0.5rem 0;
+}
+
+/* === POST PAGE === */
+.article {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+.article h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.article small {
+  display: block;
+  margin-bottom: 3rem;
+}
+.article p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
 }
